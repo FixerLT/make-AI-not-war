@@ -12,6 +12,8 @@ inline double calc_dist(const pair<int, int> &first, const pair<int, int> &secon
                 +(first.second - second.second) * (first.second - second.second)));
 }
 
+int count_true_triangles(const vector<vector<double> > &distances, )
+
 void print_2d(const vector<vector<double> > &arr){
     if(!DEBUG)
         return;
@@ -34,8 +36,7 @@ int main(){
     vector<vector<double> > distances(n);
     for(int i=0; i<n; i++)
         for(int j=0; j<n; j++)
-            if(i != j)
-                distances[i].push_back(calc_dist(cords[i], cords[j]));
+            distances[i].push_back(calc_dist(cords[i], cords[j]));
     for(int i=0; i<n; i++)
         sort(distances[i].begin(), distances[i].end());
     long long ans = 0;
